@@ -22,6 +22,10 @@ jobs:
         #skip_rules:
         #config_path:
         #webhook_url:
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: terrascan.sarif
     
   terrascan-k8s:
     runs-on: ubuntu-latest
@@ -29,7 +33,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Scan Terraform 
+    - name: Scan k8s 
       id: terrascan-k8s
       uses: accurics/terrascan-action@main
       with:
@@ -44,9 +48,7 @@ jobs:
         #skip_rules:
         #config_path:
         #webhook_url:
-        
-        
-    - name: Upload SARIF file 
+    - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v1
       with:
         sarif_file: terrascan.sarif
