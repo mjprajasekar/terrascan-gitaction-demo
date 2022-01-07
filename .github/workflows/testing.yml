@@ -22,10 +22,6 @@ jobs:
         #skip_rules:
         #config_path:
         #webhook_url:
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v1
-      with:
-        sarif_file: terrascan.sarif
     
   terrascan-k8s:
     runs-on: ubuntu-latest
@@ -47,8 +43,18 @@ jobs:
         #policy_path:
         #skip_rules:
         #config_path:
-        #webhook_url:
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v1
+  
+  
+  
+  codespell:
+    name: Check for spelling errors
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: codespell-project/actions-codespell@master
       with:
-        sarif_file: terrascan.sarif
+        check_filenames: true
+        check_hidden: true
+        skip: ./.git
+  
+
