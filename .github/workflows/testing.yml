@@ -22,12 +22,7 @@ jobs:
         #skip_rules:
         #config_path:
         #webhook_url:
-        
-    - name: Upload SARIF file 
-      uses: github/codeql-action/upload-sarif@v1
-      with:
-        sarif_file: terrascan.sarif    
-  
+    
   terrascan-k8s:
     runs-on: ubuntu-latest
     name: terrascan-action-k8s
@@ -49,6 +44,8 @@ jobs:
         #skip_rules:
         #config_path:
         #webhook_url:
+        
+        
     - name: Upload SARIF file 
       uses: github/codeql-action/upload-sarif@v1
       with:
