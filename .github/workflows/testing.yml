@@ -44,7 +44,7 @@ jobs:
         only_warn: true
         sarif_upload: true
         #non_recursive:
-        iac_dir: 'test_dirs/k8s/vul-k0s-helm-docker/kubeyaml/'
+        iac_dir: 'test_dirs/k8s/remediation-kubernetes-helm-docker/kubeyaml'
         #policy_path:
         #skip_rules:
         #config_path:
@@ -79,5 +79,3 @@ jobs:
       uses: github/codeql-action/upload-sarif@v1
       with:
         sarif_file: terrascan.sarif
-  
-
