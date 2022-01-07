@@ -64,9 +64,9 @@ jobs:
       id: terrascan-k8s
       uses: accurics/terrascan-action@main
       with:
-        iac_type: 'k8s'
+        iac_type: 'docker'
         iac_version: 'v1'
-        policy_type: 'k8s'
+        policy_type: 'docker'
         only_warn: true
         sarif_upload: true
         #non_recursive:
