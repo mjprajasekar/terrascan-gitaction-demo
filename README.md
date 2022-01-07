@@ -1,1 +1,3 @@
-# terrascan-gitaction-demo
+# Terrascan Github Action 
+
+
