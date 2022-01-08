@@ -280,9 +280,9 @@ resource "aws_route" "route_from_accepter_public_to_peering" {
   depends_on                = [aws_vpc.vpc,aws_vpc_peering_connection.peering]
 }
 
-# resource "aws_flow_log" "vpc" {
-# iam_role_arn    = "arn"
-# log_destination = "log"
-# traffic_type    = "ALL"
-#   vpc_id          = "${aws_vpc.vpc.id}"
-# }
+ resource "aws_flow_log" "vpc" {
+iam_role_arn    = "arn"
+ log_destination = "log"
+traffic_type    = "ALL"
+  vpc_id          = "${aws_vpc.vpc.id}"
+ }
