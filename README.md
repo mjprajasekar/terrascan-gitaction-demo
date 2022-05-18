@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Scan Terraform 
       id: terrascan
-      uses: accurics/terrascan-action@main
+      uses: tenable/terrascan-action@main
       with:
         iac_type: 'terraform'
         iac_version: 'v14'
@@ -82,7 +82,7 @@ jobs:
         #config_path:
         
     - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v1
+      uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: terrascan.sarif
   ```
@@ -106,7 +106,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Scan Terraform 
       id: terrascan
-      uses: accurics/terrascan-action@main
+      uses: tenable/terrascan-action@main
       with:
         iac_type: 'terraform'
         iac_version: 'v14'
@@ -121,7 +121,7 @@ jobs:
         #webhook_url:
         
     - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v1
+      uses: github/codeql-action/upload-sarif@v2
       with:
           sarif_file: terrascan.sarif
     
@@ -133,7 +133,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Scan k8s 
       id: terrascan-k8s
-      uses: accurics/terrascan-action@main
+      uses: tenable/terrascan-action@main
       with:
         iac_type: 'k8s'
         iac_version: 'v1'
@@ -147,7 +147,7 @@ jobs:
         #config_path:
         
     - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v1
+      uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: terrascan.sarif
         
@@ -173,7 +173,7 @@ jobs:
         #config_path:
         
     - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v1
+      uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: terrascan.sarif
   ```
