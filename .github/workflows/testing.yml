@@ -36,7 +36,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Scan k8s 
       id: terrascan-k8s
-      uses: accurics/terrascan-action@main
+      uses: tenable/terrascan-action@main
       with:
         iac_type: 'k8s'
         iac_version: 'v1'
@@ -62,7 +62,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Scan docker custom
       id: terrascan-k8s
-      uses: accurics/terrascan-action@main
+      uses: tenable/terrascan-action@main
       with:
         iac_type: 'docker'
         iac_version: 'v1'
