@@ -9,7 +9,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Scan Terraform 
       id: terrascan
-      uses: accurics/terrascan-action@main
+      uses:  tenable/terrascan-action@main
       with:
         iac_type: 'terraform'
         iac_version: 'v14'
@@ -74,8 +74,13 @@ jobs:
         policy_path: 'test_dirs/custom-policies/'
         #skip_rules:
         #config_path:
+        #log-output-dir: scan-result.txt
+          cat scan-result.txt >> $GITHUB_STEP_SUMMARY  
         
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v1
       with:
         sarif_file: terrascan.sarif
+  
+        
+        
