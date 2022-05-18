@@ -74,8 +74,8 @@ jobs:
         policy_path: 'test_dirs/custom-policies/'
         #skip_rules:
         #config_path:
-        log-output-dir: scan-result.txt
-             echo "{scan-result.txt}" >> $GITHUB_STEP_SUMMARY  
+        #log-output-dir: scan-result.txt
+        # echo "{scan-result.txt}" >> $GITHUB_STEP_SUMMARY  
         
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v2
