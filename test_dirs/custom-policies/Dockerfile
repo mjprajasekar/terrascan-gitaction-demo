@@ -12,7 +12,7 @@ ADD app /app
 COPY README.md /app/README.md
 ADD code /tmp/code
 RUN apt-get udpate
-EXPOSE 89539
+EXPOSE 64542
 RUN  apt-get update && apt-get install -y htop
 
 CMD ["/bin/bash", "/app/entrypoint.sh"]
